@@ -1,29 +1,27 @@
-#include <cmath> // Підключаємо бібліотеку cmath для використання математичних функцій
-#include <iostream> // Підключаємо бібліотеку iostream для вводу/виводу
-#include <windows.h> // Підключає мову
+#include <math.h>
+#include <stdio.h>
+#include <windows.h>
 
-// Функція для обчислення виразу
-double calculateS(double x, double y, double z) {
-    // Обчислюємо вираз за формулою
-    double S = (sin(x) / sqrt((y*z) / (x+y))) + 3 * pow(y, 5);
-    return S; // Повертаємо результат
+// Function to calculate the expression sin(x) / sqrt(fabs(y*z / (x + y))) + pow(3*y, 5)
+double s_calculate(double x, double y, double z) {
+    return sin(x) / sqrt(fabs(y * z / (x + y))) + pow(3 * y, 5);
 }
 
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251); //встановили шифрування
-    double x, y, z; // Оголошуємо змінні x, y, z
+    double x, y, z;
 
-    // Запитуємо у користувача ввести значення x, y, z
-    std::cout << "Введіть значення x, y, z: ";
-    std::cin >> x >> y >> z;
+    // Input values from the user
+    printf("Enter the value for x: ");
+    scanf("%lf", &x);
 
-    // Обчислюємо S за допомогою функції calculateS
-    double S = calculateS(x, y, z);
+    printf("Enter the value for y: ");
+    scanf("%lf", &y);
 
-    // Виводимо результат
-    std::cout << "Результат: " << S << std::endl;
+    printf("Enter the value for z: ");
+    scanf("%lf", &z);
 
-    return 0; // Завершуємо програму
+    double S = s_calculate(x, y, z);
+    printf("Result: %f\n", S);
+
+    return 0;
 }
-
