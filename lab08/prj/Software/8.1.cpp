@@ -1,29 +1,27 @@
-#include <cmath> 
-#include <iostream> 
-#include <windows.h> 
+#include <math.h>
+#include <stdio.h>
+#include <windows.h>
 
-
-double calculateS(double x, double y, double z) {
-    
-    double S = (sin(x) / sqrt((y*z) / (x+y))) + 3 * pow(y, 5);
-    return S; 
+// Function to calculate the expression sin(x) / sqrt(fabs(y*z / (x + y))) + pow(3*y, 5)
+double s_calculate(double x, double y, double z) {
+    return sin(x) / sqrt(fabs(y * z / (x + y))) + pow(3 * y, 5);
 }
 
 int main() {
-    SetConsoleCP(1251);
-    SetConsoleOutputCP(1251); 
-    double x, y, z; 
+    double x, y, z;
 
-    
-    std::cout << "Ââåä³òü çíà÷åííÿ x, y, z: ";
-    std::cin >> x >> y >> z;
+    // Input values from the user
+    printf("Enter the value for x: ");
+    scanf("%lf", &x);
 
-    
-    double S = calculateS(x, y, z);
+    printf("Enter the value for y: ");
+    scanf("%lf", &y);
 
-    
-    std::cout << "Ðåçóëüòàò: " << S << std::endl;
+    printf("Enter the value for z: ");
+    scanf("%lf", &z);
 
-    return 0; 
+    double S = s_calculate(x, y, z);
+    printf("Result: %f\n", S);
+
+    return 0;
 }
-
