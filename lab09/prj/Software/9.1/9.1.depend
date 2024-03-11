@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1710183609 source:c:\users\kobza\onedrive\Рабочий стол\9.1_software\9.1\main.cpp
+	<iostream>
+	"ModulesKobzar.h"
+	<stdio.h>
+
+1709104797 c:\users\kobza\onedrive\Рабочий стол\9.1_software\9.1\moduleskobzar.h
+
