@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1710969220 source:c:\users\kobza\onedrive\Рабочий стол\bmtp-lab\kobzar-mykola-kn23\lab09\prj\testdriver\main.cpp
+	<iostream>
+	"lib.h"
+
+1710969254 c:\users\kobza\onedrive\Рабочий стол\bmtp-lab\kobzar-mykola-kn23\lab09\prj\moduleskobzar\lib.h
+

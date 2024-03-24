@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <windows.h>
 
-// Function to calculate the expression sin(x) / sqrt(fabs(y*z / (x + y))) + pow(3*y, 5)
 double s_calculate(double x, double y, double z) {
     return sin(x) / sqrt(fabs(y * z / (x + y))) + pow(3 * y, 5);
 }
@@ -10,7 +9,6 @@ double s_calculate(double x, double y, double z) {
 int main() {
     double x, y, z;
 
-    // Input values from the user
     printf("Enter the value for x: ");
     scanf("%lf", &x);
 

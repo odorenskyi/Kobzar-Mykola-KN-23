@@ -1,10 +1,13 @@
-#ifndef S_CALCULATOR_H
-#define S_CALCULATOR_H
+#ifndef MODULESKOBZAR_H
+#define MODULESKOBZAR_H
 
-class SCalculator {
-public:
-    static double calculate(double x, double y, double z);
-};
+#include <cmath>
 
-#endif //
+namespace ModulesKobzar {
+ 
+    double s_calculate(double x, double y, double z) {
+        return sin(x) / sqrt(fabs(y * z / (x + y))) + pow(3 * y, 5);
+    }
+}
 
+#endif // MODULESKOBZAR_H
