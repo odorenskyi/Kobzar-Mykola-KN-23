@@ -1,48 +1,55 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <regex> // Для використання регулярних виразів
+#include <ctime>
+#include <locale> // Для використання локалізації українською мовою
 
 using namespace std;
 
 int main() {
-    system("chcp 1251"); // Встановлення кодування консолі для відображення українських символів
+    system("chcp 1251");
     cout << "----------------------------------\n"
          << "|          Kobzar Mykola ®       |\n"
          << "|ЦНТУ,Кропивницький,Україна, 2024|\n"
          << "----------------------------------\n";
 
+    time_t rawtime;
+    time(&rawtime);
+    cout << ctime(&rawtime);
 
-    // Відкриття вхідного файлу у режимі зчитування
+    // Встановлюємо українську локаль
+    setlocale(LC_ALL, "uk_UA.utf8");
+
     ifstream inputFile("input_1.txt");
 
-    // Перевірка, чи файл вдалося відкрити
     if (!inputFile) {
         cerr << "Не вдалося відкрити вхідний файл.\n";
         return 1;
     }
 
-    // Зчитування вмісту файлу в рядок
     string inputText;
-    getline(inputFile, inputText);
+    string line;
+    while (getline(inputFile, line)) {
+        inputText += line + "\n";
+    }
 
-
-    // Закриття файлу
     inputFile.close();
 
+    int lowercaseCount = 0;
+    int uppercaseCount = 0;
 
-    // Пошук кількості символів нижнього регістра у слові
-    string word = "навскіс";
-    int lowercaseCount = 7;
-    for (char c : word) {
-        if (islower(c)) {
+    // Пошук і підрахунок літер у тексті
+    for (char c : inputText) {
+        if (iswlower(c)) {
             lowercaseCount++;
+        } else if (iswupper(c)) {
+            uppercaseCount++;
         }
     }
 
-    cout << "Кількість символів нижнього регістра у слові '" << word << "': " << lowercaseCount << endl;
+    cout << "Кількість символів нижнього регістра: " << lowercaseCount << endl;
+    cout << "Кількість символів верхнього регістра: " << uppercaseCount << endl;
 
-    // Перевірка, чи слово є у вірші Василя Симоненка "Матері"
     string poem = "У сонячній хаті промінь косо Лежить криво на підлозі... Твої чорні шовкові волосся Вже посипані сивиною.";
     string wordToCheck = "підлозі";
     if (poem.find(wordToCheck) != string::npos) {
