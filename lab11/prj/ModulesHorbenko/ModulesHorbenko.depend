@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1715806257 source:c:\users\admin\desktop\projects(second)\moduleshorbenko\main.cpp
+	"ModulesHorbenko.h"
+	<fstream>
+	<iostream>
+
+1715808869 c:\users\admin\desktop\projects(second)\modulka\moduleshorbenko.h
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	"struct_type_project_4.h"
+
+1715805345 c:\users\admin\desktop\projects(second)\modulka\struct_type_project_4.h
+	<string>
+
+1715873637 source:c:\users\admin\desktop\second_version(working)\moduleshorbenko\main.cpp
+	"ModulesHorbenko.h"
+	<fstream>
+	<iostream>
+
+1715873998 c:\users\admin\desktop\second_version(working)\modulka\moduleshorbenko.h
+	<iostream>
+	<string>
+	<vector>
+	<algorithm>
+	"struct_type_project_4.h"
+
+1715805345 c:\users\admin\desktop\second_version(working)\modulka\struct_type_project_4.h
+	<string>
+
