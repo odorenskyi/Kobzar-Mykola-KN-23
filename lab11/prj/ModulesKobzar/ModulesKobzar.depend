@@ -1,6 +1,0 @@
-# depslib dependency file v1.0
-1715805986 source:c:\users\kobza\onedrive\Рабочий стол\bmtp-lab\kobzar-mykola-kn23\lab11\prj\moduleskobzar\main.cpp
-	"ModulesKobzar.h"
-	<iostream>
-	<fstream>
-
